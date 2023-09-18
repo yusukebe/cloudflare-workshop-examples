@@ -6,6 +6,9 @@ sandbox
 test-results
 playwright-report
 
+.wrangler
+wrangler.toml
+
 pnpm-lock.yaml
 
 yarn.lock
