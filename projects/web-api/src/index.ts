@@ -1,21 +1,8 @@
-import { Hono } from 'hono'
-import { z } from 'zod'
 import { zValidator } from '@hono/zod-validator'
+import type { Bindings, Post } from 'commons'
+import { schema } from 'commons'
+import { Hono } from 'hono'
 import { prettyJSON } from 'hono/pretty-json'
-
-type Bindings = {
-  DB: D1Database
-}
-
-const schema = z.object({
-  title: z.string().min(1),
-  content: z.string().min(1),
-})
-
-type Post = z.infer<typeof schema> & {
-  created_at: string
-  id: string
-}
 
 const app = new Hono<{ Bindings: Bindings }>()
 
@@ -32,7 +19,7 @@ app.post('/posts', zValidator('form', schema), async (c) => {
   const { title, content } = c.req.valid('form')
 
   const { success } = await c.env.DB.prepare(
-    `INSERT INTO posts(id, title, content) values (?, ?, ?)`
+    'INSERT INTO posts(id, title, content) values (?, ?, ?)'
   )
     .bind(id, title, content)
     .run()
@@ -57,7 +44,6 @@ app.get('/posts', async (c) => {
     'SELECT * FROM posts ORDER BY created_at DESC;'
   ).all<Post>()
   const posts = results
-  console.log(JSON.stringify(posts))
   return c.json({
     posts,
   })

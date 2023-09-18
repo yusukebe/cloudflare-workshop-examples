@@ -9,6 +9,7 @@ sandbox
 wrangler.toml
 pages
 .dev.vars
+.mf
 
 yarn.lock
 yarn-error.log

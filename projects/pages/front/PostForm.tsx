@@ -1,6 +1,7 @@
-import { AppType } from '../server'
 import { hc } from 'hono/client'
-import { useState, FormEvent } from 'react'
+import type { FormEvent } from 'react'
+import { useState } from 'react'
+import type { AppType } from '../server'
 
 interface Props {
   onSuccess: () => void

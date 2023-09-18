@@ -1,21 +1,8 @@
-import { Hono } from 'hono'
-import { z } from 'zod'
 import { zValidator } from '@hono/zod-validator'
+import { schema } from 'commons'
+import type { Bindings, Post } from 'commons'
+import { Hono } from 'hono'
 import { prettyJSON } from 'hono/pretty-json'
-
-type Bindings = {
-  DB: D1Database
-}
-
-const schema = z.object({
-  title: z.string().min(1),
-  content: z.string().min(1),
-})
-
-export type Post = z.infer<typeof schema> & {
-  created_at: string
-  id: string
-}
 
 const app = new Hono<{ Bindings: Bindings }>()
 
@@ -33,7 +20,7 @@ const route = app
     const { title, content } = c.req.valid('form')
 
     const { success } = await c.env.DB.prepare(
-      `INSERT INTO posts(id, title, content) values (?, ?, ?)`
+      'INSERT INTO posts(id, title, content) values (?, ?, ?)'
     )
       .bind(id, title, content)
       .run()

@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "@hono/zod-validator": "^0.1.8",
+    "commons": "workspace:^",
     "hono": "^3.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -16,6 +17,6 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "vite": "^4.4.9",
-    "wrangler": "^3.7.0"
+    "wrangler": "^3.8.0"
   }
 }

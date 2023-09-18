@@ -1,6 +1,7 @@
-import { useState, useEffect, useCallback } from 'react'
-import type { AppType, Post } from '../server'
+import type { Post } from 'commons'
 import { hc } from 'hono/client'
+import { useState, useEffect, useCallback } from 'react'
+import type { AppType } from '../server'
 import PostForm from './PostForm'
 
 const client = hc<AppType>('/api')
