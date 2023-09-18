@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "dev": "wrangler pages dev --compatibility-date=2023-01-01 -- vite",
+    "build": "vite build",
+    "deploy": "yarn build && wrangler pages deploy pages"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230821.0",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "vite": "^4.4.9",
+    "wrangler": "^3.7.0"
+  }
+}

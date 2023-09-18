@@ -8,6 +8,7 @@ playwright-report
 
 .wrangler
 wrangler.toml
+pages
 
 pnpm-lock.yaml
 
