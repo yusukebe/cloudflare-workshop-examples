@@ -2,9 +2,11 @@
   "name": "cloudflare-workshop",
   "version": "0.0.0",
   "private": true,
+  "workspaces": [
+    "projects/*"
+  ],
   "engines": {
-    "node": ">=18.14.1",
-    "pnpm": ">=8.7.0"
+    "node": ">=18.14.1"
   },
   "author": "Yusuke Wada",
   "license": "MIT",
@@ -18,5 +20,6 @@
     "eslint-plugin-node": "^11.1.0",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
-  }
+  },
+  "packageManager": "yarn@3.6.3"
 }
