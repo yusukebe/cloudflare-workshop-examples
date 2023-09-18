@@ -39,7 +39,3 @@ export default function App() {
     </div>
   )
 }
-
-function Form() {
-  return <></>
-}
