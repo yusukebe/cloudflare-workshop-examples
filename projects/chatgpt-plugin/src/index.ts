@@ -1,6 +1,6 @@
 import { OpenAPIHono } from '@hono/zod-openapi'
 import { cors } from 'hono/cors'
-import { aiPluginJson } from './api-plugin'
+import { aiPluginJson } from './ai-plugin'
 import { routeAddTodo, routeDeleteTodo, routeGetTodos } from './routes'
 
 const _TODOS: Record<string, string[]> = {}
