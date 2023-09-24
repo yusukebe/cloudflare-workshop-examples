@@ -5,10 +5,12 @@
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
-    "hono": "^3.6.3"
+    "@hono/zod-validator": "^0.1.8",
+    "hono": "^3.6.3",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20230821.0",
+    "@cloudflare/workers-types": "^4.20230914.0",
     "vitest": "^0.34.4",
     "wrangler": "^3.8.0"
   }
