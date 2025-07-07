@@ -11,12 +11,10 @@
   "author": "Yusuke Wada",
   "license": "MIT",
   "devDependencies": {
-    "@hono/eslint-config": "^0.0.4",
-    "prettier": "^3.0.3",
-    "typescript": "^5.2.2"
+    "@hono/eslint-config": "^2.0.2",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.23.0"
   },
-  "packageManager": "yarn@4.9.2",
-  "dependencies": {
-    "wrangler": "^3.8.0"
-  }
+  "packageManager": "yarn@4.9.2"
 }
