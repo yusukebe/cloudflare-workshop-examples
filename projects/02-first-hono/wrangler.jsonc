@@ -2,7 +2,7 @@
   "$schema": "../../node_modules/wrangler/config-schema.json",
   "name": "02-first-hono",
   "main": "src/index.ts",
-  "compatibility_date": "2025-07-08"
+  "compatibility_date": "2025-04-16"
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
