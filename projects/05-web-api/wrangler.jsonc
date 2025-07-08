@@ -2,7 +2,14 @@
   "$schema": "../../node_modules/wrangler/config-schema.json",
   "name": "05-web-api",
   "main": "src/index.ts",
-  "compatibility_date": "2025-04-16"
+  "compatibility_date": "2025-04-16",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "blog",
+      "database_id": "0ae98ee2-fc46-4c1f-826a-faa9c36e310a"
+    }
+  ]
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
